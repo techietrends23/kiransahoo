@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* Premium Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,51 +8,58 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: #0a192f;
-  color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e9f0f7 100%);
+  color: #232b33;
+  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
+  letter-spacing: 0.01em;
 }
 
-.main-content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 48px 24px 0 48px;
+.premium-bg {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 64px 24px 0 24px;
+  background: none;
 }
 
 .hero-section {
-  margin-top: 64px;
-  margin-bottom: 48px;
+  margin-top: 48px;
+  margin-bottom: 56px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  width: 100%;
 }
 
 .main-title {
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: #fff;
-  margin-bottom: 8px;
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #1a2233;
+  margin-bottom: 10px;
   letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(180,200,220,0.10);
 }
 
 .subtitle {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 500;
-  color: #fff;
-  margin-bottom: 28px;
+  color: #3a8bfd;
+  margin-bottom: 32px;
+  letter-spacing: 0.02em;
 }
 
 .ai-enthusiast {
-  color: #00ff88;
-  font-weight: 600;
+  color: #1db6a3;
+  font-weight: 700;
 }
 
 .cursor {
   display: inline-block;
   width: 3px;
-  background-color: #00ff88;
+  background-color: #1db6a3;
   margin-left: 2px;
   animation: blink 1s infinite;
 }
@@ -65,95 +72,129 @@ body {
 
 .social-row {
   display: flex;
-  gap: 18px;
+  gap: 22px;
   margin-bottom: 36px;
 }
-.icon-btn {
-  background: #112240;
-  color: #fff;
-  width: 40px;
-  height: 40px;
+.premium-icon {
+  background: rgba(255,255,255,0.85);
+  color: #1db6a3;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  font-size: 1.2rem;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  font-size: 1.35rem;
+  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 24px rgba(58,139,253,0.08);
   border: none;
 }
-.icon-btn:hover {
-  background: #00ff88;
-  color: #0a192f;
-  transform: translateY(-2px) scale(1.08);
+.premium-icon:hover {
+  background: linear-gradient(135deg, #3a8bfd 0%, #1db6a3 100%);
+  color: #fff;
+  transform: translateY(-3px) scale(1.12);
+  box-shadow: 0 8px 32px rgba(58,139,253,0.18);
 }
 
 .demos-section {
   margin-top: 24px;
+  width: 100%;
+  max-width: 800px;
 }
 .demos-title {
-  color: #00ff88;
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 28px;
+  color: #1db6a3;
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 32px;
   letter-spacing: 1px;
   text-align: left;
 }
 .demos-list {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 28px;
+}
+.glass-card {
+  background: rgba(255,255,255,0.75);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(58,139,253,0.10);
+  backdrop-filter: blur(4px) saturate(120%);
+  -webkit-backdrop-filter: blur(4px) saturate(120%);
+  border: 1.5px solid rgba(58,139,253,0.10);
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.glass-card:hover {
+  box-shadow: 0 16px 48px rgba(58,139,253,0.16);
+  transform: translateY(-2px) scale(1.02);
 }
 .demo-row {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-  gap: 18px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
-.demo-btn {
-  background: #e6e6e6;
-  color: #222;
+.premium-btn {
+  background: linear-gradient(90deg, #3a8bfd 0%, #1db6a3 100%);
+  color: #fff;
   border: none;
-  padding: 12px 20px;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: 500;
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  font-weight: 700;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(58,139,253,0.10);
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  width: 350px;
-  flex-shrink: 0;
+  min-height: 52px;
+  min-width: 320px;
+  max-width: 100%;
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
-.demo-btn:hover {
-  background: #00ff88;
-  color: #0a192f;
+.premium-btn:hover {
+  background: linear-gradient(90deg, #1db6a3 0%, #3a8bfd 100%);
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(58,139,253,0.18);
+  transform: translateY(-2px) scale(1.04);
 }
 .demo-desc {
-  color: #bfc9d1;
-  font-size: 1rem;
+  color: #232b33;
+  font-size: 1.05rem;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   flex-grow: 1;
   min-height: 44px;
   display: flex;
   align-items: center;
 }
 
-@media (max-width: 700px) {
-  .main-content {
-    padding: 24px 16px 0 16px;
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeInUp 1.1s cubic-bezier(0.23, 1, 0.32, 1) 0.2s forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .premium-bg {
+    padding: 32px 4px 0 4px;
   }
   .main-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .subtitle {
     font-size: 1.1rem;
@@ -161,26 +202,30 @@ body {
   .demos-title {
     font-size: 1.1rem;
   }
-  .demo-desc {
-    font-size: 0.95rem;
-    min-height: auto;
-    padding: 8px 0;
+  .glass-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 14px 8px;
   }
   .demo-row {
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
   }
-  .demo-btn {
-    font-size: 0.95rem;
-    padding: 12px 20px;
-    width: 100%;
-    min-width: 100%;
+  .premium-btn {
+    font-size: 0.98rem;
+    padding: 14px 8px;
+    min-width: 90vw;
+    max-width: 100vw;
     text-align: center;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
   .hero-section {
-    margin-top: 32px;
-    margin-bottom: 32px;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 
